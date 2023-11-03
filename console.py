@@ -14,6 +14,8 @@ class HBNBCommand(cmd.Cmd):
         return True
     def emptyline(self):
         pass
+    def default(self, line):
+        print(f"*** Unknown command: {line}")
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
