@@ -8,14 +8,14 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
     def do_quit(self, arg):
         """exit to console"""
+        print("Exit")
         return True 
     def do_EOF(self, arg):
         """exit to console"""
+        print("Exit")
         return True
     def emptyline(self):
         pass
-    def default(self, line):
-        print(f"*** Unknown command: {line}")
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
