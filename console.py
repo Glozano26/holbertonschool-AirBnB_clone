@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Console to interact with the model"""
 
 import cmd
 
