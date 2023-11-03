@@ -3,6 +3,7 @@
 
 import json
 from models.base_model import BaseModel
+import models 
 
 class FileStorage:
     """Serializes the instances to a JSON file and deserializes
@@ -26,10 +27,10 @@ class FileStorage:
         """Serializes __objects to the JSON file (path: __file_path)."""
         new_dict = {}
         for key, obj in FileStorage.__objects.items():
-            new_dict[key] = obj.to.dict()
+            new_dict[key] = obj.to_dict()
         with open(FileStorage.__file_path, 'w') as file:
             json.dump(new_dict, file, default=str) 
-
+            print(new_dict)
     def reload(self):
         """deserializes the JSON file"""
         try:
