@@ -2,7 +2,7 @@
 """a class model"""
 import uuid
 from datetime import datetime
-
+import models 
 
 
 class BaseModel():
@@ -25,7 +25,7 @@ class BaseModel():
 
     def save(self):
         """assign with the current datetime and will be updated"""
-        self.update_at = datetime.datetime.now()
+        self.update_at = datetime.now()
         models.storage.save()
         
     def __str__(self):
