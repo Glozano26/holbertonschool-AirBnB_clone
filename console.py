@@ -1,24 +1,25 @@
 #!/usr/bin/python3
-"""Console to interact with the model"""
+"""Firts Class Base"""
 import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    """contains the entry point of the command interpreter"""
+
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
-        """Quit command to exit the program"""
+        """Quit command to exit the program\n"""
         print("Exit")
         return True
-
+    
     def do_EOF(self, arg):
-        """exit to console"""
+        """Exit the Program"""
         print("Exit")
         return True
-
+    
     def emptyline(self):
+        """an empty line + ENTER shouldn’t execute anything"""
         pass
-
+    
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
