@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Console to interact with the model"""
-
 import cmd
+
 
 class HBNBCommand(cmd.Cmd):
     """contains the entry point of the command interpreter"""
