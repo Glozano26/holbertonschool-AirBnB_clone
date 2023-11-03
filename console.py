@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Firts Class Base"""
+"""Firts Console"""
 import cmd
 
 
