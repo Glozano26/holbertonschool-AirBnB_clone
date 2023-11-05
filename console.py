@@ -124,10 +124,7 @@ class HBNBCommand(cmd.Cmd):
                 instance = all_objs[key]
                 if instance.__class__.__name__ in HBNBCommand.class_list:
                     setattr(instance, args[2], args[3])
-                    instance.save()
-               
-
-
-            
+                    instance.save()            
+           
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
