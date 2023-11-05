@@ -36,7 +36,7 @@ class FileStorage:
         """deserializes the JSON file"""
         from models.base_model import BaseModel
         if os.path.exists(FileStorage.__file_path):
-            with open(self.__file_path, "r") as f:
+            with open(FileStorage.__file_path, "r") as f:
                 temp_dict = json.load(f)
                 for key, value in temp_dict.items():
                     obj_id = key.split(".")
