@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Firts Console"""
 import cmd
+import json 
+from models import storage
 from models.base_model import BaseModel
-from models.engine.file_storage import FileStorage
-import models
-import json
+from models.engine.file_storage import FileStorage 
 from models.user import User
 
 
