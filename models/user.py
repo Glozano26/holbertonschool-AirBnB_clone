@@ -2,6 +2,7 @@
 """a class User that inherits from BaseModel"""
 from models.base_model import BaseModel
 from models import storage
+import json
 
 class User(BaseModel):
     """Public class attributes"""
