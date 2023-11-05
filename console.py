@@ -33,7 +33,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         class_name = arg.strip()
-        if class_name not in ["BaseModel"]:
+        if class_name not in [HBNBCommand.class_list]:
             print("** class doesn't exist **")
             return 
         
@@ -55,7 +55,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             class_name = args[0]
             key = class_name + "." + args[1]
-            all_objs = models.storage.all()
+            all_objs = storage.all()
             if key in all_objs:
                 print(all_objs[key])
             else:
@@ -74,17 +74,17 @@ class HBNBCommand(cmd.Cmd):
         else:
             class_name = args[0]
             key = class_name + "." + args[1]
-            all_objs = models.storage.all()
+            all_objs = storage.all()
             if key in all_objs:
                 del all_objs[key]
-                models.storage.save()
+                storage.save()
             else:
                 print("** no instance found **")
     
     def do_all(self, arg):
         """Prints all string representation of all instances based or not on the class name."""
         args = arg.split()
-        obj_dict = models.storage.all()
+        obj_dict = storage.all()
 
         if not args:
             new_list = []
@@ -116,7 +116,7 @@ class HBNBCommand(cmd.Cmd):
         elif len(args) == 3:
             print("** value missing **")
         else:
-            all_objs = models.storage.all()
+            all_objs = storage.all()
             key = args[0] + "." + args[1]
             if key not in all_objs:
                 print("** no instance found **")
