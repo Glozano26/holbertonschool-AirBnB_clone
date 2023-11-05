@@ -38,7 +38,8 @@ class FileStorage:
             with open(self.__file_path, "r") as f:
                 temp_dict = json.load(f)
                 for key, value in temp_dict.items():
-                    tmp_name = eval(value["__class__"])(**value)
+                    key_obj = key.split(".")
+                    tmp_name = eval(key_obj[0])(**value)
                     FileStorage.__objects[key] = tmp_name
         except Exception:
             pass

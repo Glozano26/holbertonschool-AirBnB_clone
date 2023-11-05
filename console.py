@@ -32,15 +32,14 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
             return
-        class_name = arg.strip()
-        if class_name not in [HBNBCommand.class_list]:
+        class_arg = arg.split()
+        class_name = class_arg[0]
+        if class_name not in HBNBCommand.class_list:
             print("** class doesn't exist **")
-            return 
-        
-        new_instance = eval(class_name)()
-        new_instance.save()
-        
-        print(new_instance.id)
+        else:
+            new_instance = eval(class_name)()
+            new_instance.save()
+            print(new_instance.id)
     
     def do_show(self, arg):
         """ Prints the string representation of an instance based on the class name and id.
