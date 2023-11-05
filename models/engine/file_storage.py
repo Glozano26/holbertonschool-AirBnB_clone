@@ -38,7 +38,10 @@ class FileStorage:
             with open(self.__file_path, "r") as f:
                 temp_dict = json.load(f)
                 for key, value in temp_dict.items():
-                    tmp_name = eval(value["__class__"])(**value)
-                    FileStorage.__objects[key] = tmp_name
-        except Exception:
+                    class_name = value["__class__"]
+                    obj_class = getattr(models, class_name)
+                    instance = obj_class(**value)
+                    key = "{}.{}".format(class_name, instance.id)
+                    FileStorage.__objects[key] = instance
+        except FileNotFoundError:
             pass
