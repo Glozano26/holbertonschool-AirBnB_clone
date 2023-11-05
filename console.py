@@ -5,6 +5,8 @@ from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 import models
 import json
+from models.user import User
+
 
 class HBNBCommand(cmd.Cmd):
 
@@ -123,7 +125,7 @@ class HBNBCommand(cmd.Cmd):
                 if instance.__class__.__name__ in HBNBCommand.class_list:
                     setattr(instance, args[2], args[3])
                     instance.save()
-                
+               
 
 
             
