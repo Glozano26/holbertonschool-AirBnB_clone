@@ -34,11 +34,11 @@ class FileStorage:
 
     def reload(self):
         """deserializes the JSON file"""
-        from models.base_model import BaseModel
-        if os.path.exists(FileStorage.__file_path):
-            with open(FileStorage.__file_path, "r") as f:
+        try:
+            with open(self.__file_path, "r") as f:
                 temp_dict = json.load(f)
                 for key, value in temp_dict.items():
-                    obj_id = key.split(".")
-                    tmp_name = eval(obj_id[0])(**value)
+                    tmp_name = eval(value["__class__"])(**value)
                     FileStorage.__objects[key] = tmp_name
+        except Exception:
+            pass
