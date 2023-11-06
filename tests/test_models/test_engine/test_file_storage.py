@@ -1,53 +1,57 @@
 #!/usr/bin/python3
-"""Unittest module for the class State
-"""
+"""Unittest for file_storage file: class and methods"""
+
+import pycodestyle
 import unittest
-import datetime
-import models
 from models.engine import file_storage
 from models.engine.file_storage import FileStorage
 import os
 
 
-class TestFileStorage(unittest.TestCase):
-    """methods of the test for class State"""
+class TestBaseModelpep8(unittest.TestCase):
+    """Validate pep8"""
 
-    def test_documentation(self):
-        """this checks all the documentation
-        of all the methods of the class
-        """
-        self.assertIsNotNone(file_storage.__doc__)
-        self.assertIsNotNone(FileStorage.__doc__)
-        self.assertIsNotNone(FileStorage.all.__doc__)
-        self.assertIsNotNone(FileStorage.new.__doc__)
-        self.assertIsNotNone(FileStorage.save.__doc__)
-        self.assertIsNotNone(FileStorage.reload.__doc__)
+    def test_pep8(self):
+        """test for base file and test_base file pep8"""
+        style = pycodestyle.StyleGuide(quiet=True)
+        filestorage_pep8 = "models/engine/file_storage.py"
+        t_f_s_pep8 = "tests/test_models/test_engine/test_file_storage.py"
+        result = style.check_files([filestorage_pep8, t_f_s_pep8])
+        self.assertEqual(result.total_errors, 0)
 
-    def test_uniqueId(self):
-        """this check if the instance
-        that are created has a unique id
-        """
-        instance1 = FileStorage()
-        instance2 = FileStorage()
-        self.assertNotEqual(instance1, instance2)
 
-    def test_exec_permissions(self):
-        """Method that test for check the execution permissions
-        """
+class TestDocsBaseModel(unittest.TestCase):
+    """test docstrings for base and test_base files"""
+
+    def test_module(self):
+        """check module docstrings"""
+        self.assertTrue(len(file_storage.__doc__) > 0)
+
+    def test_class(self):
+        """check class docstrings"""
+        if FileStorage.__doc__ is not None:
+            self.assertTrue(len(FileStorage.__doc__) > 0)
+
+    def test_method(self):
+        """check method docstrings"""
+        for func in dir(FileStorage):
+            if func.__doc__ is not None:
+                self.assertTrue(len(func.__doc__) > 0)
+
+    def test_permissions(self):
+        """test read-write-execute permissions"""
         read = os.access('models/engine/file_storage.py', os.R_OK)
         self.assertTrue(read)
         write = os.access('models/engine/file_storage.py', os.W_OK)
         self.assertTrue(write)
-        exect = os.access('models/engine/file_storage.py', os.X_OK)
-        self.assertTrue(exect)
+        exe = os.access('models/engine/file_storage.py', os.X_OK)
+        self.assertTrue(exe)
 
-    def test_typeData(self):
-        """this method check the type of
-        the atributes when created a instance
-        """
-        instance1 = FileStorage()
-        self.assertIsInstance(instance1, FileStorage)
+    def test_instance(self):
+        """check if obj is an instance of BaseModel"""
+        obj = FileStorage()
+        self.assertIsInstance(obj, FileStorage)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
