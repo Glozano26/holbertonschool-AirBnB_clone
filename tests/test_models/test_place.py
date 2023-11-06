@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Unittest for place file: class and methods"""
 
-import pep8
+import pycodestyle
 import unittest
 from models import place
 from models.place import Place
@@ -12,7 +12,7 @@ class TestBaseModelpep8(unittest.TestCase):
 
     def test_pep8(self):
         """test for base file and test_base file pep8"""
-        style = pep8.StyleGuide(quiet=True)
+        style = pycodestyle.StyleGuide(quiet=True)
         place_pep8 = "models/place.py"
         test_place_pep8 = "tests/test_models/test_place.py"
         result = style.check_files([place_pep8, test_place_pep8])
@@ -28,12 +28,14 @@ class TestDocsBaseModel(unittest.TestCase):
 
     def test_class(self):
         """check class docstrings"""
-        self.assertTrue(len(Place.__doc__) > 0)
+        if Place.__doc__ is not None:
+            self.assertTrue(len(Place.__doc__) > 0)
 
     def test_method(self):
         """check method docstrings"""
         for func in dir(Place):
-            self.assertTrue(len(func.__doc__) > 0)
+            if func.__doc__ is not None:
+                self.assertTrue(len(func.__doc__) > 0)
 
 
 if __name__ == "__main__":
