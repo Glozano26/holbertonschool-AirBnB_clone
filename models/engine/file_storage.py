@@ -13,12 +13,12 @@ class FileStorage:
     __objects = {}
     
     @classmethod    
-    def all(self):
+    def all(cls):
         """returns the dictionary"""
         return FileStorage.__objects
     
     @classmethod
-    def new(self, obj):
+    def new(cls, obj):
         """sets in __objects the obj with key <obj class name>.id"""
         if obj:
             key = "{}.{}".format(obj.__class__.__name__, obj.id)
