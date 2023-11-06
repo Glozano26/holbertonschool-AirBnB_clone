@@ -10,33 +10,33 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
- 
+
 
 class FileStorage:
     """Serializes the instances to a JSON file and deserializes
     the JSON file into instances:"""
     __file_path = "file.json"
     __objects = {}
-    
-    @classmethod    
+
+    @classmethod
     def all(cls):
         """returns the dictionary"""
         return FileStorage.__objects
-    
+
     @classmethod
     def new(cls, obj):
         """sets in __objects the obj with key <obj class name>.id"""
         if obj:
             key = "{}.{}".format(obj.__class__.__name__, obj.id)
             FileStorage.__objects[key] = obj
-    
+
     def save(self):
         """Serializes __objects to the JSON file (path: __file_path)."""
         new_dict = {}
         for key, obj in FileStorage.__objects.items():
             new_dict[key] = obj.to_dict()
         with open(FileStorage.__file_path, 'w', encoding='utf-8') as file:
-            json.dump(new_dict, file, default=str) 
+            json.dump(new_dict, file, default=str)
 
     def reload(self):
         """deserializes the JSON file"""
