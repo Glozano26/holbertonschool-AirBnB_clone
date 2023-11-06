@@ -26,7 +26,7 @@ class BaseModel():
 
     def save(self):
         """assign with the current datetime and will be updated"""
-        self.update_at = datetime.now()
+        self.updated_at = datetime.now()
         models.storage.save()
 
     def __str__(self):
