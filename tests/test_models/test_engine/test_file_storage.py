@@ -10,8 +10,8 @@ import os
 
 
 class TestFileStorage(unittest.TestCase):
-    """methods of the test for class State
-    """
+    """methods of the test for class State"""
+
     def test_documentation(self):
         """this checks all the documentation
         of all the methods of the class
@@ -47,6 +47,7 @@ class TestFileStorage(unittest.TestCase):
         """
         instance1 = FileStorage()
         self.assertIsInstance(instance1, FileStorage)
+
 
 if __name__ == '__main__':
     unittest.main()

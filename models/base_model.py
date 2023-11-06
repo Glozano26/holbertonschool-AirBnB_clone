@@ -6,7 +6,8 @@ import models
 
 
 class BaseModel():
-    """a class BaseModel that defines all common attributes/methods for other classes"""
+    """a class BaseModel that defines all common
+    attributes/methods for other classes"""
     def __init__(self, *args, **kwargs):
         """initit BaseModel"""
         if kwargs != {}:
@@ -27,23 +28,22 @@ class BaseModel():
         """assign with the current datetime and will be updated"""
         self.update_at = datetime.now()
         models.storage.save()
-        
+
     def __str__(self):
         """Update a dict"""
         class_name = self.__class__.__name__
         return (f"[{class_name}] ({self.id}) {self.__dict__}")
-    
+
     def to_dict(self):
         """returns a dictionary containing all keys/values"""
 
         """Gets the dictionary of the instance attributes"""
         obj_dict = self.__dict__.copy()
-        
+
         obj_dict['__class__'] = self.__class__.__name__
-        
+
         """converted to string object in ISO format"""
         obj_dict['created_at'] = self.created_at.isoformat()
         obj_dict['updated_at'] = self.updated_at.isoformat()
 
-        return obj_dict 
-
+        return obj_dict
