@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""class Amenity"""
+"""class City"""
+
 from models.base_model import BaseModel
 
-class Amenity(BaseModel):
+class City(BaseModel):
     """classes that inherit from BaseModel"""
+    state_id = ""
     name = ""
