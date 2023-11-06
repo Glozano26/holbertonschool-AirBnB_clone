@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Unittest for basemodel file: class and methods"""
 
-import pep8
+import pycodestyle
 import unittest
 import os
 from models import base_model
@@ -79,7 +79,7 @@ class TestBaseModelpep8(unittest.TestCase):
 
     def test_pep8(self):
         """test for base file and test_base file pep8"""
-        style = pep8.StyleGuide(quiet=True)
+        style = pycodestyle.StyleGuide(quiet=True)
         base_mod = "models/base_model.py"
         test_base_mod = "tests/test_models/test_base_model.py"
         result = style.check_files([base_mod, test_base_mod])
