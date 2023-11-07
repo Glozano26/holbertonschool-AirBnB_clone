@@ -44,7 +44,8 @@ To use the AirBnB Clone Command Interpreter, follow these general steps:
 1. Clone the project repository to your local machine.
 2. Navigate to the project directory.
 
->./console.py
+```
+./console.py
 
 (hbnb) help
 
@@ -58,8 +59,8 @@ EOF  help  quit
 
 (hbnb) quit
 
->$
-
+$
+```
 ### Running the Command Interpreter
 To start the command interpreter, run the following command:
 
