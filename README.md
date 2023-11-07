@@ -6,8 +6,8 @@ Welcome to the README for the AirBnB Clone Command Interpreter, which is an inte
 - Project Overview
 - Getting Started
 - Usage
-- Supported Commands
-Resources
+- How to use
+- Unittesting
 
 ## Introduction
 The AirBnB Clone Command Interpreter is the first step toward building a full web application, the AirBnB clone. This step is crucial because it lays the foundation for the subsequent projects, including HTML/CSS templating, database storage, API integration, and front-end development. Here's what this project aims to achieve:
@@ -40,7 +40,7 @@ Before you begin working with the AirBnB Clone Command Interpreter, make sure yo
   
 ## Usage
 To use the AirBnB Clone Command Interpreter, follow these general step:
-> $ git clone git@github.com:ricardovaldesv/holbertonschool-AirBnB_clone.git
+> $ git clone git@github.com:glozano26/holbertonschool-AirBnB_clone.git
 
 ### Running the Command Interpreter
 To start the command interpreter, run the following command:
@@ -81,9 +81,9 @@ They should pass in non-interactive mode: $ echo "python3 -m unittest discover t
 | quit   | Close the console                   | quit                                     |
 
 ## Unittesting:keyboard:
-All the test files can be executed by this command
+All the test files can be executed by this command -
 ```python3 -m unittest discover tests```
-Or run tests file by file using this command
+Or run tests file by file using this command -
 ```python3 -m unittest tests/test_models/test_base_model.py```
 
 ## Authors:
