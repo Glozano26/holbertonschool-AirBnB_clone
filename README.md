@@ -80,9 +80,11 @@ They should pass in non-interactive mode: $ echo "python3 -m unittest discover t
 | destroy | Destroy specified object            | destroy class id                        |
 | quit   | Close the console                   | quit                                     |
 
-
-## Supported Commands
-The Command Interpreter supports a variety of commands for creating, retrieving, updating, and deleting objects. You can use these commands to interact with your AirBnB objects. Refer to the documentation or help within the interpreter for a full list of available commands and their usage.
+## Unittesting:keyboard:
+All the test files can be executed by this command -
+```python3 -m unittest discover tests```
+Or run tests file by file using this command -
+```python3 -m unittest tests/test_models/test_base_model.py```
 
 ## Authors:
 - [Gilberto Lozano Gutiérrez](AUTHORS#nombre-del-autor-1)
