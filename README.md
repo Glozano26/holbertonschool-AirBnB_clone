@@ -39,10 +39,14 @@ Before you begin working with the AirBnB Clone Command Interpreter, make sure yo
 - [Python Test Cheatsheet](https://realpython.com/python-testing/)
   
 ## Usage
-To use the AirBnB Clone Command Interpreter, follow these general steps:
+To use the AirBnB Clone Command Interpreter, follow these general step:
 
-1. Clone the project repository to your local machine.
-2. Navigate to the project directory.
+## Running the Command Interpreter
+To start the command interpreter, run the following command:
+
+> python console.py
+
+You'll enter an interactive command-line interface where you can execute commands for managing AirBnB objects.
 
 ```
 ./console.py
@@ -61,17 +65,21 @@ EOF  help  quit
 
 $
 ```
-### Running the Command Interpreter
-To start the command interpreter, run the following command:
+## How to use:
 
-> python console.py
+| File   | Description                         | Attributes                               |
+|--------|-------------------------------------|------------------------------------------|
+| help   | Display all commands available      | help                                     |
+| create | Creates a new object                | create (class here)                     |
+| update | Updates attribute of an object     | update class id name_attribute var_attribute |
+| all    | Display all objects in class        | all (class here) or only (all)          |
+| show   | Retrieve an object from a file      | show class id                           |
+| destroy | Destroy specified object            | destroy class id                        |
+| quit   | Close the console                   | quit                                     |
 
-You'll enter an interactive command-line interface where you can execute commands for managing AirBnB objects.
 
 ## Supported Commands
 The Command Interpreter supports a variety of commands for creating, retrieving, updating, and deleting objects. You can use these commands to interact with your AirBnB objects. Refer to the documentation or help within the interpreter for a full list of available commands and their usage.
-
-
 
 [Gilberto Lozano Gutiérrez](AUTHORS#nombre-del-autor-1)
 [David Vasquez Mahecha](AUTHORS#nombre-del-autor-2)
