@@ -12,8 +12,8 @@ Resources
 ### Introduction
 The AirBnB Clone Command Interpreter is the first step toward building a full web application, the AirBnB clone. This step is crucial because it lays the foundation for the subsequent projects, including HTML/CSS templating, database storage, API integration, and front-end development. Here's what this project aims to achieve:
 
-Create a parent class named BaseModel to handle the initialization, serialization, and deserialization of instances.
-Establish a simple flow of serialization and deserialization: Instance <-> Dictionary <-> JSON string <-> file.
+*1.*Create a parent class named BaseModel to handle the initialization, serialization, and deserialization of instances.
+*2.*Establish a simple flow of serialization and deserialization: Instance <-> Dictionary <-> JSON string <-> file.
 Define all classes required for the AirBnB project (e.g., User, State, City, Place) that inherit from BaseModel.
 Develop the first abstracted storage engine for the project, which is the File storage.
 Implement unit tests to validate all classes and the storage engine.
