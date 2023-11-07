@@ -19,7 +19,7 @@ The AirBnB Clone Command Interpreter is the first step toward building a full we
 5. Implement unit tests to validate all classes and the storage engine.
 
 ## Project Overview
-## What's a Command Interpreter?
+### What's a Command Interpreter?
 Think of the Command Interpreter as similar to the shell, but it's tailored for a specific purpose. In this case, we want to manage objects in our AirBnB project, allowing us to perform the following actions:
 
 - Create a new object (e.g., a new User or a new Place).
@@ -81,5 +81,6 @@ $
 ## Supported Commands
 The Command Interpreter supports a variety of commands for creating, retrieving, updating, and deleting objects. You can use these commands to interact with your AirBnB objects. Refer to the documentation or help within the interpreter for a full list of available commands and their usage.
 
+## Authors:
 [Gilberto Lozano Gutiérrez](AUTHORS#nombre-del-autor-1)
 [David Vasquez Mahecha](AUTHORS#nombre-del-autor-2)
