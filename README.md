@@ -81,9 +81,9 @@ They should pass in non-interactive mode: $ echo "python3 -m unittest discover t
 | quit   | Close the console                   | quit                                     |
 
 ## Unittesting:keyboard:
-All the test files can be executed by this command -
+All the test files can be executed by this command
 ```python3 -m unittest discover tests```
-Or run tests file by file using this command -
+Or run tests file by file using this command
 ```python3 -m unittest tests/test_models/test_base_model.py```
 
 ## Authors:
