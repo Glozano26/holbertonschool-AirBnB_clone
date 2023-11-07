@@ -1,12 +1,12 @@
-# AirBnB Clone Command Interpreter README
+# AirBnB Clone Command Interpreter :department_store:
 Welcome to the README for the AirBnB Clone Command Interpreter, which is an integral part of the AirBnB Clone project. This command interpreter allows you to manage AirBnB objects efficiently. In this document, we'll provide you with an overview of the project, its purpose, and the steps you need to follow to get started.
 
 ## Table of Contents
-Introduction
-Project Overview
-Getting Started
-Usage
-Supported Commands
+- Introduction
+- Project Overview
+- Getting Started
+- Usage
+- Supported Commands
 Resources
 
 ## Introduction
@@ -40,8 +40,9 @@ Before you begin working with the AirBnB Clone Command Interpreter, make sure yo
   
 ## Usage
 To use the AirBnB Clone Command Interpreter, follow these general step:
+> $ git clone git@github.com:ricardovaldesv/holbertonschool-AirBnB_clone.git
 
-## Running the Command Interpreter
+### Running the Command Interpreter
 To start the command interpreter, run the following command:
 
 > python console.py
@@ -65,6 +66,8 @@ EOF  help  quit
 
 $
 ```
+They should pass in non-interactive mode: $ echo "python3 -m unittest discover tests" | bash
+
 ## How to use:
 
 | File   | Description                         | Attributes                               |
@@ -82,5 +85,5 @@ $
 The Command Interpreter supports a variety of commands for creating, retrieving, updating, and deleting objects. You can use these commands to interact with your AirBnB objects. Refer to the documentation or help within the interpreter for a full list of available commands and their usage.
 
 ## Authors:
-[Gilberto Lozano Gutiérrez](AUTHORS#nombre-del-autor-1)
-[David Vasquez Mahecha](AUTHORS#nombre-del-autor-2)
+- [Gilberto Lozano Gutiérrez](AUTHORS#nombre-del-autor-1)
+- [David Vasquez Mahecha](AUTHORS#nombre-del-autor-2)
